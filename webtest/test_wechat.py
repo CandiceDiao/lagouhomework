@@ -4,11 +4,11 @@
 """
 import json
 from time import sleep
-from webtest import webdriver
+from selenium import webdriver
 import pytest
-from webtest.webdriver.common.by import By
-from webtest.webdriver.support import expected_conditions
-from webtest.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class TestWechat:
