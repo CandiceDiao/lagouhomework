@@ -1,0 +1,13 @@
+cat:
+  name: "cat lucy"
+  clor: "yellow"
+  age: 1
+  gender: "F"
+  fur: "short"
+
+dog:
+  name: "dog Tom"
+  clor: "red"
+  age: 2
+  gender: "M"
+  fur: "long"
