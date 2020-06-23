@@ -49,13 +49,13 @@ class TestWechat:
         # sleep(5)
         # 显示等待按钮“导入通讯录”可以被点击
         # WebDriverWait(self.driver, 5).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,".index_service a:nth-child(2) span:nth-child(2)")))
-        self.driver.find_element(By.CSS_SELECTOR,".index_service a:nth-child(2) span:nth-child(2)").click()
+        self.find(By.CSS_SELECTOR,".index_service a:nth-child(2) span:nth-child(2)").click()
         # sleep(5)
         # 显示等待
         WebDriverWait(self.driver,5).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR,"#js_upload_file_input")))
-        self.driver.find_element(By.CSS_SELECTOR,"#js_upload_file_input").send_keys('C:/Users/diaod/Desktop/【测试工程师】学习计划.xlsx')
+        self.find(By.CSS_SELECTOR,"#js_upload_file_input").send_keys('C:/Users/diaod/Desktop/【测试工程师】学习计划.xlsx')
         # sleep(5)
         WebDriverWait(self.driver, 5).until(
             expected_conditions.presence_of_element_located((By.ID,"upload_file_name")))
-        assert_ele=self.driver.find_element(By.ID,"upload_file_name").text
+        assert_ele=self.find(By.ID,"upload_file_name").text
         assert assert_ele=="【测试工程师】学习计划.xlsx"
