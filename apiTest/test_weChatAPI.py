@@ -2,6 +2,7 @@
 # 实现通讯录的增删改查
 # 使用 session 减少字段的重复项
 import requests
+from hamcrest import *
 class TestWechatAccess:
     ###实例化会话对象
     s = requests.Session()
@@ -57,6 +58,7 @@ class TestWechatAccess:
         #     "userid":"zhangsan"
         # }
         res = self.s.get(url="https://qyapi.weixin.qq.com/cgi-bin/user/delete")
+        assert_that(self.test_getMember()['errmsg'], starts_with('userid not found'))
         print(res.json())
 
 
